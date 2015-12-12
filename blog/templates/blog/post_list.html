@@ -13,11 +13,14 @@
         </div>
 
         <div>
-            <h2><a href="">Fist Post</a></h2>
-        </div>
-
-        <div>
-            <h2><a href="">Second Post</a></h2>
+        	{% for post in posts %}
+        	<div>
+    			<p>published: {{ post.published_date }}</p>
+        		<h1><a href="">{{ post.title }}</a></h1>
+        		<p>{{ post.text|linebreaks }}</p>
+			</div>
+			{% endfor %}
+            
         </div>
 	
 	</body>
